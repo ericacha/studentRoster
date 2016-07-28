@@ -12,6 +12,10 @@
 - CSS
 - AngularJS
 
+####Setup Instructions
+- clone this repository, https://github.com/ericacha/studentRoster
+- open in browser, studentRoster/index.html
+
 
 
 #### License: <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">MIT</a>  
