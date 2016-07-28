@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="studentRoster">
+    <head>
+        <title> Student Roster App </title>
+        <script src="lib/angular.js"> </script>
+        <script src="app.js"> </script>
+        <script src="js/StudentsController.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="containter" ng-controller="StudentsCtrl">
+            <div class="row">
+                <div class="col-md-12">
+                    <center>
+                        <h1> Student Roster </h1>
+                    </center>
+                    <div class="col-sm-6">
+                        <h2>New Student </h2>
+                        <form ng-submit="addStudent()" class="form-inline" role="form">
+                            <div class="form-group">
+                                <input type="text" ng-model="studentName" class="form-control" placeholder="Enter name">
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                    </div>
+                    <div class="col-sm-6">
+                        <h2> Student List </h2>
+                        <ul>
+                            <li ng-repeat = "item in students">
+                                {{item.name}} <a ng-click="deleteStudent(item)">Delete</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>
